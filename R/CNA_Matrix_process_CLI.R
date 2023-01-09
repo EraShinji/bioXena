@@ -7,10 +7,10 @@
 #' @export
 #'
 #' @examples test
-CNA_Matrix_process_GUI <- function(tar_gene,target_path){
+CNA_Matrix_process_GUI <- function(tar_gene){
   library("tidyverse")
   library(magrittr)
-  path <- target_path
+  path <- file.choose()
   CNAmatrix_Origin <- read_tsv(path,col_names = TRUE) %>%
     select(Sample = 1,everything()) %>%
     mutate(Sample = str_sub(.$Sample,start = 1,end = 15)) %>%
