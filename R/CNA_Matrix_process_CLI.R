@@ -1,4 +1,4 @@
-#' CNA_Matrix_process_GUI
+#' CNA_Matrix_process_CLI
 #'
 #' @param tar_gene The Gene Name needed to be filtered
 #' @param target_path The Dataset Filepath
