@@ -1,4 +1,4 @@
-#' CNA_Matrix_process_GUI
+#' CNA_Matrix_process_CLI
 #'
 #' @param tar_gene The Gene Name needed to be filtered
 #' @param target_path The Dataset Filepath
@@ -7,10 +7,10 @@
 #' @export
 #'
 #' @examples test
-CNA_Matrix_process_GUI <- function(tar_gene){
+CNA_Matrix_process_GUI <- function(tar_gene,target_path){
   library("tidyverse")
   library(magrittr)
-  path <- file.choose()
+  path <- target_path
   CNAmatrix_Origin <- read_tsv(path,col_names = TRUE) %>%
     select(Sample = 1,everything()) %>%
     mutate(Sample = str_sub(.$Sample,start = 1,end = 15)) %>%
